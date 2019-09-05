@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>All in one - vue-static-page-experiment</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but vue-static-page-experiment doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app" class="container">
+      <counter></counter>
+      <p>I'm just a static <em>p</em> tag in the page.</p>
+      <expander inline-template>
+        <div class="expander">
+          <p class="toggler-wrapper"><a href="#" @click.prevent="toggle">Expand me</a></p>
+          <div class="content" v-if="expanded">
+            <p>I'm the content from the page itself!</p>
+          </div>
+        </div>
+      </expander>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

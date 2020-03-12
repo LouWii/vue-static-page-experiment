@@ -11,6 +11,11 @@ Vue.component(
   () => import('../../components/Expander')
 )
 
+Vue.component(
+  'modal',
+  () => import('../../components/Modal')
+)
+
 Vue.config.productionTip = false
 
 new Vue({

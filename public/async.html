@@ -27,6 +27,13 @@
       <modal>
         <template slot="modal-content">My custom content</template>
       </modal>
+      <p>Other static content here</p>
+      <modal modal-name="counter-modal">
+        <template slot="modal-content">
+          <p>Modal with counter inside</p>
+          <counter></counter>
+        </template>
+      </modal>
     </div>
     <!-- built files will be auto injected -->
   </body>

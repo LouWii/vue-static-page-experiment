@@ -18,10 +18,10 @@
     },
     methods: {
       increment: function() {
-        this.count++;
+        this.count++
       },
       decrement: function() {
-        this.count--;
+        this.count--
       }
     }
   }

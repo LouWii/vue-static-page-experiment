@@ -1,7 +1,7 @@
 <template>
     <div class="modal-module">
         <button class="btn btn-primary" @click.prevent="openModal">Modal</button>
-        <foo-modal name="test-modal">
+        <foo-modal :name="modalName">
             <slot name="modal-content">Default modal content</slot>
         </foo-modal>
     </div>
@@ -16,6 +16,12 @@ Vue.use(VModal, { componentName: "foo-modal" })
 export default {
     name: 'Modal',
     components: {VModal},
+    props: {
+        modalName: {
+            type: String,
+            default: 'my-modal'
+        }
+    },
     data() {
         return {
             modalOpened: false,
@@ -23,7 +29,7 @@ export default {
     },
     methods: {
         openModal: function() {
-            this.$modal.show('test-modal');
+            this.$modal.show(this.modalName)
         }
     }
 }
